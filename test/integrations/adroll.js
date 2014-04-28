@@ -152,7 +152,22 @@ describe('AdRoll', function () {
     it('should work with multiple segments', function(){
       adroll.options.events = [{ key: 'event', value: 'one' }, { key: 'event', value: 'two' }];
       test(adroll).track('event', { revenue: 3.99 });
-      console.log(window.__adroll.record_user.args);
+      var args = window.__adroll.record_user.args;
+      assert(window.__adroll.record_user.calledTwice);
+
+      // one
+      assert.deepEqual(args[0][0], {
+        adroll_segments: 'one',
+        adroll_conversion_value_in_dollars: 3.99,
+        order_id: 0
+      });
+
+      // two
+      assert.deepEqual(args[1][0], {
+        adroll_segments: 'two',
+        adroll_conversion_value_in_dollars: 3.99,
+        order_id: 0
+      });
     })
   })
 
