@@ -138,6 +138,16 @@ describe('AdRoll', function () {
         order_id: 0
       }));
     })
+
+    it('should work with array .events option too', function(){
+      adroll.options.events = [{ key: 'event', value: 'segment' }];
+      test(adroll).track('event', { revenue: 3.99 });
+      assert(window.__adroll.record_user.calledWith({
+        adroll_segments: 'segment',
+        adroll_conversion_value_in_dollars: 3.99,
+        order_id: 0
+      }));
+    })
   })
 
 });
