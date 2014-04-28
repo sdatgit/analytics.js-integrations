@@ -97,6 +97,21 @@ describe('ChurnBee', function(){
         .with(['login', {}]);
     })
 
+    it('should work with array .events', function(){
+      churnbee.options.events = [{ key: 'User Login', value: 'login' }];
+      test(churnbee)
+        .track('User Login')
+        .called(window._cbq.push)
+        .with(['login', {}]);
+    })
+
+    it('should work with multiple events', function(){
+      churnbee.options.events = [{ key: 'event', value: 'login' }, { key: 'event', value: 'register' }];
+      test(churnbee).track('event');
+      assert(window._cbq.push.calledTwice);
+      var args = window._cbq.push.args;
+    })
+
     it('should try and map non standard events using `events` option', function(){
       churnbee.options.events = { UserLoggedIn: 'login' };
       test(churnbee)
