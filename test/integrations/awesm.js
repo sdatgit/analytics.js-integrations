@@ -95,6 +95,21 @@ describe('awe.sm', function () {
       assert(!window.AWESM.convert.called);
     });
 
+    it('should support .events as array', function(){
+      awesm.options.events = [{ key: 'event', value: 'goal_1' }];
+      test(awesm).track('event');
+      assert(window.AWESM.convert.calledWith('goal_1', 0));
+    })
+
+    it('should track multiple goals', function(){
+      awesm.options.events = [{ key: 'event', value: 'goal_1' }, { key: 'event', value: 'goal_2' }];
+      test(awesm).track('event');
+      var args = window.AWESM.convert.args;
+      assert(window.AWESM.convert.calledTwice);
+      assert.deepEqual(args[0], ['goal_1', 0, null, null]);
+      assert.deepEqual(args[1], ['goal_2', 0, null, null]);
+    })
+
     it('should accept a value property', function () {
       test(awesm)
       .track('Test', { value: 1 })
