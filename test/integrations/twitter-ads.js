@@ -50,6 +50,18 @@ describe('Twitter Ads', function(){
         .with({ txn_id: 'c36462a3', p_id: 'Twitter' });
     })
 
+    it('should support array events', function(){
+      twitter.options.events = [{ key: 'signup', value: 'c36462a3' }];
+      test(twitter).track('signup');
+      assert(Twitter.load.calledWith({ txn_id: 'c36462a3', p_id: 'Twitter' }));
+    })
+
+    it('should support multiple events', function(){
+      twitter.options.events = [{ key: 'event', value: 'one' }, { key: 'event', value: 'two' }];
+      test(twitter).track('event');
+      assert(Twitter.load.calledTwice);
+    })
+
     it('should send correctly', function(){
       test(twitter).track('play');
       var img = Twitter.load.returnValues[0];
