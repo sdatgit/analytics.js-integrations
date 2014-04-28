@@ -91,6 +91,37 @@ describe('AdWords', function(){
       }))
     })
 
+    it('should support arrayed .events', function(){
+      adwords.options.events = [{ key: 'event', value: '7d2374dc' }];
+      test(adwords).track('event', { revenue: 100 });
+      assert(adwords.conversion.calledWith({
+        conversionId: 978352801,
+        label: '7d2374dc',
+        value: 100
+      }));
+    })
+
+    it('should be able to send multiple events', function(){
+      adwords.options.events = [{ key: 'event', value: 'one'}, { key: 'event', value: 'two' }];
+      test(adwords).track('event', { revenue: 100 });
+      var args = adwords.conversion.args;
+      assert(adwords.conversion.calledTwice);
+
+      // one
+      assert.deepEqual(args[0][0], {
+        conversionId: 978352801,
+        label: 'one',
+        value: 100
+      });
+
+      // two
+      assert.deepEqual(args[1][0], {
+        conversionId: 978352801,
+        label: 'two',
+        value: 100
+      });
+    })
+
     it('should send revenue', function(){
       test(adwords).track('login', { revenue: 90 });
       assert(adwords.conversion.calledWith({
