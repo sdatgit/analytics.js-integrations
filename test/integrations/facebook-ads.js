@@ -58,6 +58,20 @@ describe('Facebook Ads', function(){
         .with({ id: 1, value: 50, currency: 'USD' });
     })
 
+    it('should support .events as array', function(){
+      facebook.options.events = [{ key: 'signup', value: 0 }];
+      test(facebook)
+        .track('signup', { revenue: 9 })
+        .called(Facebook.load)
+        .with({ id: 0, value: 9, currency: 'USD' });
+    })
+
+    it('should send multiple events', function(){
+      facebook.options.events = [{ key: 'signup', value: 0 }, { key: 'signup', value: 1 }];
+      test(facebook).track('signup', { revenue: 1 });
+      assert(Facebook.load.calledTwice);
+    })
+
     it('should send correctly', function(){
       test(facebook).track('play', { revenue: 90 });
       var img = Facebook.load.returnValues[0];
