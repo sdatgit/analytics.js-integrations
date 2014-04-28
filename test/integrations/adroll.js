@@ -99,7 +99,7 @@ describe('AdRoll', function () {
 
   describe('#track', function(){
     beforeEach(function(){
-      window.__adroll.record_user = sinon.spy();
+      window.__adroll = { record_user: sinon.spy() };
     })
 
     it('should send events', function(){
@@ -147,6 +147,12 @@ describe('AdRoll', function () {
         adroll_conversion_value_in_dollars: 3.99,
         order_id: 0
       }));
+    })
+
+    it('should work with multiple segments', function(){
+      adroll.options.events = [{ key: 'event', value: 'one' }, { key: 'event', value: 'two' }];
+      test(adroll).track('event', { revenue: 3.99 });
+      console.log(window.__adroll.record_user.args);
     })
   })
 
