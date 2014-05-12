@@ -30,7 +30,7 @@ describe('Intercom', function () {
       .assumesPageview()
       .readyOnLoad()
       .global('Intercom')
-      .option('activator', '#IntercomDefaultWidget')
+      .option('activator', '')
       .option('appId', '')
       .option('inbox', false);
   });
@@ -211,7 +211,7 @@ describe('Intercom', function () {
       }));
     });
 
-    it('should send widget settings if the activator isnt the default one.', function () {
+    it('should send widget settings if the activator is not empty.', function () {
       intercom.options.activator = '#my-widget';
       test(intercom).identify('id');
       assert(window.Intercom.calledWith('boot', {
@@ -224,7 +224,20 @@ describe('Intercom', function () {
       }));
     });
 
-    it('should not send activator if its the default one.', function () {
+    it('should send widget settings if the activator is not empty.', function () {
+      intercom.options.activator = '#IntercomDefaultWidget';
+      test(intercom).identify('id');
+      assert(window.Intercom.calledWith('boot', {
+        app_id: settings.appId,
+        user_id: 'id',
+        id: 'id',
+        widget: {
+          activator: '#IntercomDefaultWidget'
+        }
+      }));
+    });
+
+    it('should not send activator if its an empty string', function () {
       test(intercom).identify('id');
       assert(window.Intercom.calledWith('boot', {
         app_id: settings.appId,
