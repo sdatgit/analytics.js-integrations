@@ -19,6 +19,7 @@ module.exports = [
   require('./lib/churnbee'),
   require('./lib/clicktale'),
   require('./lib/clicky'),
+  require('./lib/colligso'),
   require('./lib/comscore'),
   require('./lib/crazy-egg'),
   require('./lib/curebit'),
