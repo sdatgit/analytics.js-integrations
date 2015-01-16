@@ -1,4 +1,32 @@
 
+1.3.27 / 2015-01-15
+===================
+
+  * Centralize Extole into a single file to fix build error
+
+1.3.26 / 2015-01-15
+===================
+
+  * Merge pull request #497 from segmentio/fix/extole
+
+1.3.25 / 2015-01-15
+===================
+
+  * Extole: fix for subdir name issues
+
+1.3.24 / 2015-01-14
+===================
+
+ * add support for bing ads universal event tracking
+
+1.3.23 / 2015-01-14
+===================
+
+  * Add Extole integration
+  * preact logger now backwards compatible (can log with _lnq or _preactq)
+  * Customerio: Updating test values
+  * Blueshift: shouldnt assume pageview
+
 1.3.22 / 2015-01-08
 ===================
 
