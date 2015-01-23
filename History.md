@@ -1,4 +1,140 @@
 
+1.3.37 / 2015-01-23
+===================
+
+  * Perfect Audience: quick style change
+
+1.3.36 / 2015-01-22
+===================
+
+  * Quantcast: Adding custom label support
+  * Vero: Implemented #alias
+  * Atatus: new integration.
+  * Satismeter: new integration
+
+1.3.35 / 2015-01-22
+===================
+
+  * Atatus: styling fixes
+
+1.3.34 / 2015-01-22
+===================
+
+  * Merge pull request #506 from segmentio/fix/atatus
+  * Atatus: styling fixes
+  * Merge pull request #461 from satismeter/master
+  * Merge pull request #467 from fizerkhan/integration-atatus
+  * Release 1.3.29
+  * Merge pull request #469 from thomassittig/master
+  * cleanup
+  * update additional-tracking-data-structure and updated tests
+  * fixed integrations-counter and tests
+  * Merge remote-tracking branch 'upstream/master'
+  * added the tracking of basic-custom-data
+  * cleaned up integration- and test-code
+  * initial userlike-integration
+  * Increased length of integrations.
+  * Updated unit testing. Removed UMD.
+  * Added atatus integration.
+  * new integration: satismeter
+
+1.3.33 / 2015-01-22
+===================
+
+  * Merge pull request #506 from segmentio/fix/atatus
+  * Atatus: styling fixes
+  * Merge pull request #461 from satismeter/master
+  * Merge pull request #467 from fizerkhan/integration-atatus
+  * Release 1.3.29
+  * Merge pull request #469 from thomassittig/master
+  * cleanup
+  * update additional-tracking-data-structure and updated tests
+  * fixed integrations-counter and tests
+  * Merge remote-tracking branch 'upstream/master'
+  * added the tracking of basic-custom-data
+  * cleaned up integration- and test-code
+  * initial userlike-integration
+  * Increased length of integrations.
+  * Updated unit testing. Removed UMD.
+  * Added atatus integration.
+  * new integration: satismeter
+
+1.3.32 / 2015-01-22
+===================
+
+  * Merge pull request #506 from segmentio/fix/atatus
+  * Atatus: styling fixes
+  * Merge pull request #461 from satismeter/master
+  * Merge pull request #467 from fizerkhan/integration-atatus
+  * Release 1.3.29
+  * Merge pull request #469 from thomassittig/master
+  * cleanup
+  * update additional-tracking-data-structure and updated tests
+  * fixed integrations-counter and tests
+  * Merge remote-tracking branch 'upstream/master'
+  * added the tracking of basic-custom-data
+  * cleaned up integration- and test-code
+  * initial userlike-integration
+  * Increased length of integrations.
+  * Updated unit testing. Removed UMD.
+  * Added atatus integration.
+  * new integration: satismeter
+
+1.3.31 / 2015-01-22
+===================
+
+  * Merge pull request #506 from segmentio/fix/atatus
+  * Atatus: styling fixes
+  * Merge pull request #461 from satismeter/master
+  * Merge pull request #467 from fizerkhan/integration-atatus
+  * Release 1.3.29
+  * Merge pull request #469 from thomassittig/master
+  * cleanup
+  * update additional-tracking-data-structure and updated tests
+  * fixed integrations-counter and tests
+  * Merge remote-tracking branch 'upstream/master'
+  * added the tracking of basic-custom-data
+  * cleaned up integration- and test-code
+  * initial userlike-integration
+  * Increased length of integrations.
+  * Updated unit testing. Removed UMD.
+  * Added atatus integration.
+  * new integration: satismeter
+
+1.3.30 / 2015-01-22
+===================
+
+  * Merge pull request #506 from segmentio/fix/atatus
+  * Atatus: styling fixes
+  * Merge pull request #461 from satismeter/master
+  * Merge pull request #467 from fizerkhan/integration-atatus
+  * Release 1.3.29
+  * Merge pull request #469 from thomassittig/master
+  * cleanup
+  * update additional-tracking-data-structure and updated tests
+  * fixed integrations-counter and tests
+  * Merge remote-tracking branch 'upstream/master'
+  * added the tracking of basic-custom-data
+  * cleaned up integration- and test-code
+  * initial userlike-integration
+  * Increased length of integrations.
+  * Updated unit testing. Removed UMD.
+  * Added atatus integration.
+  * new integration: satismeter
+
+1.3.29 / 2015-01-21
+===================
+
+  * Userlike integration
+
+1.3.28 / 2015-01-19
+==================
+
+  * mojn: fix tests
+  * changed analytics.gif to identify.gif
+  * mojn: add failing tests
+  * Add Nudgespot integration
+
 1.3.27 / 2015-01-15
 ===================
 

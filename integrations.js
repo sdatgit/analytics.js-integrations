@@ -9,6 +9,7 @@ module.exports = [
   require('./lib/alexa'),
   require('./lib/amplitude'),
   require('./lib/appcues'),
+  require('./lib/atatus'),
   require('./lib/awesm'),
   require('./lib/bing-ads'),
   require('./lib/blueshift'),
@@ -68,6 +69,7 @@ module.exports = [
   require('./lib/quantcast'),
   require('./lib/rollbar'),
   require('./lib/saasquatch'),
+  require('./lib/satismeter'),
   require('./lib/segmentio'),
   require('./lib/sentry'),
   require('./lib/snapengage'),
@@ -80,5 +82,6 @@ module.exports = [
   require('./lib/visual-website-optimizer'),
   require('./lib/webengage'),
   require('./lib/woopra'),
-  require('./lib/yandex-metrica')
+  require('./lib/yandex-metrica'),
+  require('./lib/userlike')
 ];
